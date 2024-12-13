@@ -1,0 +1,13 @@
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\bin\Debug\net9.0\G3.Core.Utils.deps.json
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\bin\Debug\net9.0\G3.Core.Utils.dll
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\bin\Debug\net9.0\G3.Core.Utils.pdb
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.csproj.AssemblyReference.cache
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.AssemblyInfoInputs.cache
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.AssemblyInfo.cs
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.csproj.CoreCompileInputs.cache
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.sourcelink.json
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.dll
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\refint\G3.Core.Utils.dll
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\G3.Core.Utils.pdb
+C:\Code\G3\G3.Core.Package\Framework\G3.Core.Utils\obj\Debug\net9.0\ref\G3.Core.Utils.dll
