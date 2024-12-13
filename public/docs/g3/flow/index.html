@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.8a54eeb264554b92c728d7e19e44e2cb41c835ddd1f87a5a7eee66ad1d473dbeedaa4968ed4efbc8251539af3af7794965073a939b4b0dff863fac55e6565527.css" integrity="sha512-ilTusmRVS5LHKNfhnkTiy0HINd3R&#43;Hpafu5mrR1HPb7tqklo7U77yCUVOa8693lJZQc6k5tLDf&#43;GP6xV5lZVJw==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/docs/g3/flow/">
+
+  <link rel="canonical" href="http://localhost:1313/docs/g3/flow/">
+
+
+<title>  |  My Docs</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/docs/g3/flow/">
+  <meta property="og:site_name" content="My Docs">
+  <meta property="og:title" content="My Docs">
+  <meta property="og:description" content="Flow Data Helpers Dialog Helpers XML Mapping Helps map from a the case schema to an xsd as the inital setup The export will create a CSV of the connect configuration">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="My Docs">
+  <meta name="twitter:description" content="Flow Data Helpers Dialog Helpers XML Mapping Helps map from a the case schema to an xsd as the inital setup The export will create a CSV of the connect configuration">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Welcome to Doks",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/docs/",
+       "name": "Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/docs/g3/",
+       "name": "G3 Flow",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/docs/g3/flow/",
+       "name": "Flow",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">My Docs</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Guides</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/guides/example-guide/">Example Guide</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/reference/example-reference/">Example Reference</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>G3 Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/g3/flow/"></a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">My Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link active" href="http://localhost:1313/docs/guides/example-guide/" aria-current="true">Docs</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/g3/">G3</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/blog/">Blog</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="http://localhost:1313/docs/g3/" aria-current="true">G3 Flow</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/thuliteio/doks"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-fluid" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Guides</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/guides/example-guide/">Example Guide</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/reference/example-reference/">Example Reference</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>G3 Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/g3/flow/"></a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#dialog-helpers">Dialog Helpers</a>
+      <ul>
+        <li><a href="#xml-mapping">XML Mapping</a></li>
+        <li><a href="#html-mapping">HTML Mapping</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-mapping">Default Mapping</a></li>
+    <li><a href="#data-mapping">Data Mapping</a>
+      <ul>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#source-type">Source Type</a></li>
+        <li><a href="#array-source">Array Source</a></li>
+        <li><a href="#source">Source</a></li>
+        <li><a href="#special-source-prefixes">Special Source Prefixes</a></li>
+        <li><a href="#calculation-formulas">Calculation (formulas)</a></li>
+        <li><a href="#formating-the-data">Formating the data</a></li>
+        <li><a href="#default">Default</a></li>
+        <li><a href="#disable">Disable</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		
+			<h1></h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dialog-helpers">Dialog Helpers</a>
+      <ul>
+        <li><a href="#xml-mapping">XML Mapping</a></li>
+        <li><a href="#html-mapping">HTML Mapping</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-mapping">Default Mapping</a></li>
+    <li><a href="#data-mapping">Data Mapping</a>
+      <ul>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#source-type">Source Type</a></li>
+        <li><a href="#array-source">Array Source</a></li>
+        <li><a href="#source">Source</a></li>
+        <li><a href="#special-source-prefixes">Special Source Prefixes</a></li>
+        <li><a href="#calculation-formulas">Calculation (formulas)</a></li>
+        <li><a href="#formating-the-data">Formating the data</a></li>
+        <li><a href="#default">Default</a></li>
+        <li><a href="#disable">Disable</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<h1 id="flow-data-helpers">Flow Data Helpers</h1>
+<h2 id="dialog-helpers">Dialog Helpers<a href="#dialog-helpers" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="xml-mapping">XML Mapping<a href="#xml-mapping" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Helps map from a the case schema to an xsd as the inital setup
+The export will create a CSV of the connect configuration</p>
+<h3 id="html-mapping">HTML Mapping<a href="#html-mapping" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Helps map from a the case schema to a HTML template used to create a PDF
+Sections add login to show or hide parts of the template</p>
+<h2 id="default-mapping">Default Mapping<a href="#default-mapping" class="anchor" aria-hidden="true">#</a> </h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>YAML</strong></td>
+          <td style="text-align: left">Display the current process config in YAML, it can be used to edit or copy &amp; paste sections</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Data</strong></td>
+          <td style="text-align: left">The main configuratipn dialog, more below</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Shared</strong></td>
+          <td style="text-align: left">Data cna be mapped to a &ldquo;shared&rdquo; area like variables that tehn can be using in other processes</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Output</strong></td>
+          <td style="text-align: left">Used to translate the default process output</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="data-mapping">Data Mapping<a href="#data-mapping" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="conditions">Conditions<a href="#conditions" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Conditions are used to allow or stop the mapping. Conditons use similar formulas to Calculcations (below) but must return a true or false.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>Get(&#34;case.addMerchant.amex&#34;)==&#34;True&#34;</code></pre>
+  </figure>
+</div>
+<h3 id="source-type">Source Type<a href="#source-type" class="anchor" aria-hidden="true">#</a> </h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Case Data</strong></td>
+          <td style="text-align: left">The default</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Case Property</strong></td>
+          <td style="text-align: left">Allows access to system information outside of the acutal case data, these include<ul><li> caseId</li><li>caseType</li><li>owner</li><li>status (also in case data)</li><li>created</li><li>completed</li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Input</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Calculation</strong></td>
+          <td style="text-align: left">See below</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Shared</strong></td>
+          <td style="text-align: left">Trigger Data</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Paramater</strong></td>
+          <td style="text-align: left">Trigger Data</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Text: Static Text</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Special</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Heading</strong></td>
+          <td style="text-align: left">Used to break up the configuation on the LHS of the data mapping dialog</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="array-source">Array Source<a href="#array-source" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The array source is used to break up the source, the array source is interated for each item, the source is then used to access the data using a property with the same name are the array</p>
+<p>Array Source example</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>terminalAltLocations[].providers[]</code></pre>
+  </figure>
+</div>
+<p>Source (providers is a signle item of providers[])</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>Get(&#34;providers.profession.aphra&#34;) == &#34;Y&#34; &amp;&amp; (Get(&#34;providers.ahpraInfo.surname&#34;) != Get(&#34;providers.surname&#34;) || (HasValue(&#34;providers.ahpraInfo.middleName&#34;) ? (Get(&#34;providers.ahpraInfo.firstName&#34;) + &#34; &#34; + Get(&#34;providers.ahpraInfo.middleName&#34;)) != Get(&#34;providers.givenNames&#34;) : Get(&#34;providers.ahpraInfo.firstName&#34;) != Get(&#34;providers.givenNames&#34;))) ? &#34;&#34; : &#34;Yes&#34;</code></pre>
+  </figure>
+</div>
+<h3 id="source">Source<a href="#source" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Used in conjunction with the source type</p>
+<p>The source cam also start with input. or param. (old logic)</p>
+<h3 id="special-source-prefixes">Special Source Prefixes<a href="#special-source-prefixes" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="nextref">NextRef<a href="#nextref" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Gets the next reference number/counter, example below uses the SingleMerch &ldquo;GetNext&rdquo; counter which is configured as</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>NextRef:SingleMerch</code></pre>
+  </figure>
+</div>
+<p>Examples of GetNext config</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: left">Prefix</th>
+          <th style="text-align: left">Final Length</th>
+          <th style="text-align: left">Counter</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Amend</td>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">126413</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SingleMerch</td>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">102703</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MultiMerch</td>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">102664</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ChangeOwner</td>
+          <td style="text-align: left">Z</td>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">101012</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="now">Now<a href="#now" class="anchor" aria-hidden="true">#</a> </h4>
+<p>The current date and time</p>
+<h4 id="extractfile">ExtractFile<a href="#extractfile" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Extacts the most recent file associated with the source, returning the filename</p>
+<p>Options:</p>
+<ul>
+<li>base64, as base64 data</li>
+</ul>
+<h4 id="fileurldata">FileUrlData<a href="#fileurldata" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Extacts the most recent file associated with the source, returning the data in URL base 64 format</p>
+<h4 id="extractfiledate">ExtractFileDate<a href="#extractfiledate" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Extacts the date and time of most recent file associated with the source</p>
+<h4 id="extractsignaure">ExtractSignaure<a href="#extractsignaure" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Extacts signature data to a file (normally SVG data)</p>
+<p>Options can also be added in this format</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>SpecialCode,option1,option2:</code></pre>
+  </figure>
+</div>
+<p>Options:</p>
+<ul>
+<li>base64, as base64 data</li>
+<li>png, as a png image</li>
+<li>999x999, image size in pixels</li>
+</ul>
+<p>Example for a Special Prefix</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>extractSignature,64,png,500x300:director1.directorSign</code></pre>
+  </figure>
+</div>
+<h3 id="calculation-formulas">Calculation (formulas)<a href="#calculation-formulas" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You can use .Net C# code to calulate a result (or condition true/false), however if you reference a property that doesn&rsquo;t exist it can blow up. For that reason it&rsquo;s good to use the Get() below to ensure it can be processed.</p>
+<p>Examples</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>case.amex.requested?&#34;Y&#34;:&#34;&#34;</code></pre>
+  </figure>
+</div>
+<p>A condition formula with C# functions</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>case.practicePhone.StartsWith(&#34;02&#34;) || case.practicePhone.StartsWith(&#34;03&#34;) || case.practicePhone.StartsWith(&#34;07&#34;) || case.practicePhone.StartsWith(&#34;08&#34;)</code></pre>
+  </figure>
+</div>
+<p>Additonal inbuilt functions</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Function</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Get()</td>
+          <td style="text-align: left">Returns the property value or null (wont blow up if the property value doesn&rsquo;t exist)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">GetNum()</td>
+          <td style="text-align: left">Returns the decimal value of the the data</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">GetInt()</td>
+          <td style="text-align: left">Returns the integer value of the the data</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">GetBool()</td>
+          <td style="text-align: left">Returns the boolean value of the the data</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">HasValue()</td>
+          <td style="text-align: left">Returns true if the property has a value, or false if it is null or blank (empty String)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IsNull()</td>
+          <td style="text-align: left">Returns true of the property is null or doesnt have a value</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IsNotNull()</td>
+          <td style="text-align: left">Opposite of IsNull()</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IsNullOrEmpty()</td>
+          <td style="text-align: left">Returns true of the property is null, doesnt have a value or is an empty string (Blank)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Count()</td>
+          <td style="text-align: left">Used to count how many items are in an array</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IsValid()</td>
+          <td style="text-align: left">Checks the validation rules in the schema, (still WIP)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="formating-the-data">Formating the data<a href="#formating-the-data" class="anchor" aria-hidden="true">#</a> </h3>
+<p>NB Any formating will cause the data to be converted to a string first. If you require objects as the output, don&rsquo;t use formating</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">format Prefix</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">LOOKUP</td>
+          <td style="text-align: left">Returns the description for the value using the lookup defined in the schema (WIP)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LOOKUP:<em>[lookupname]</em></td>
+          <td style="text-align: left">Returns the description for the value using a lookup</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LOOKUPREV:<em>[lookupname]</em></td>
+          <td style="text-align: left">Returns the value for the description using a lookup (Reverse lookup)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">contains dd or mm</td>
+          <td style="text-align: left">Returns the value formated as Date/Time</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">TITLE</td>
+          <td style="text-align: left">converts the data to title case</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">UPPER</td>
+          <td style="text-align: left">converts the data to upper case</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LOWER</td>
+          <td style="text-align: left">converts the data to lower case</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">TEXT:<em>[format]</em></td>
+          <td style="text-align: left">formats the data using the text format</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">NUM:<em>[format]</em></td>
+          <td style="text-align: left">formats the data using the number format, Eg #,##0.00</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><em>[format]</em></td>
+          <td style="text-align: left">automatic text or number formating</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CALC:</td>
+          <td style="text-align: left">a special format at the will use a calculation/formula instead</td>
+      </tr>
+  </tbody>
+</table>
+<p>Old formating</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">format Prefix</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">=VALUE</td>
+          <td style="text-align: left">returns Y of the data matches the VALUE or it will return N</td>
+      </tr>
+  </tbody>
+</table>
+<p>Example</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>Format dd/mm/yyyy for a date</code></pre>
+  </figure>
+</div>
+<p>Complex Example, the source creates the data, in this example that was the file data, this is a special case where CALC was used to rename the file, not calculate the data</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>CALC:case.reference+&#34;_&#34;+case.abnInfo.abn+&#34;_IC_&#34;+(providers.profession.providerAllocatedBy==&#34;Medicare&#34;?providers.medicareProviderNumber:((Get(&#34;providers.profession.hicapsNumberSupport&#34;)==&#34;Y&#34; &amp;&amp; Get(&#34;providers.issuedNumberType&#34;)==&#34;Medibank&#34;) || (Get(&#34;providers.profession.hicapsNumberSupport&#34;)==&#34;N&#34; &amp;&amp; Get(&#34;providers.profession.providerAllocatedBy&#34;).Contains(&#34;Medibank&#34;)))?providers.medibankProviderNumber:providers.issuedNumberType==&#34;Yes&#34;?providers.hicapsProviderNumber:&#34;Request&#34;)+&#34;_0&#34;+providers._id+&#34;_&#34;+DateTime.Now.Date.ToString(&#34;yyyyMMdd&#34;)</code></pre>
+  </figure>
+</div>
+<h3 id="default">Default<a href="#default" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A default value is used if the data is blank/empty</p>
+<h3 id="disable">Disable<a href="#disable" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Will disable processing of this item</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/docs/reference/example-reference/" class="stretched-link text-reset text-decoration-none">Example Reference</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+			</div>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Brought to you by <a class="text-muted" href="https://thulite.io/">Thulite</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.baffbaac4ba0048e0752c0d150bacb0d3bc693ce2efa09e2850f72c37e564eed.js"
+  integrity="sha256-uv&#43;6rEugBI4HUsDRULrLDTvGk84u&#43;gnihQ9yw35WTu0=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.be33aab3067e96554f261851c25a593228b91154cd28ff5c7f8d52b2e7f306d2.js"
+  integrity="sha256-vjOqswZ&#43;llVPJhhRwlpZMii5EVTNKP9cf41SsufzBtI=">
+</script>
+<script async
+  src="/js/search-modal.97d606e77f08deeb37876860d99c8f6813ef29263e73b6435c252de6be98d55e.js"
+  integrity="sha256-l9YG538I3us3h2hg2ZyPaBPvKSY&#43;c7ZDXCUt5r6Y1V4=">
+</script>
+
+    
+  </body>
+</html>

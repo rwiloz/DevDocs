@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Welcome to Doks on My Docs</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content in Welcome to Doks on My Docs</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Post</title>
+      <link>http://localhost:1313/blog/example-post/</link>
+      <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
+      <guid>http://localhost:1313/blog/example-post/</guid>
+      <description>You can use blog posts for announcing product updates and features.</description>
+    </item>
+    <item>
+      <title>Example Guide</title>
+      <link>http://localhost:1313/docs/guides/example-guide/</link>
+      <pubDate>Thu, 07 Sep 2023 16:04:48 +0200</pubDate>
+      <guid>http://localhost:1313/docs/guides/example-guide/</guid>
+      <description>&lt;p&gt;Guides lead a user through a specific task they want to accomplish, often with a sequence of steps. Writing a good guide requires thinking about what your users are trying to do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example Reference</title>
+      <link>http://localhost:1313/docs/reference/example-reference/</link>
+      <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
+      <guid>http://localhost:1313/docs/reference/example-reference/</guid>
+      <description>&lt;p&gt;Reference pages are ideal for outlining how things work in terse and clear terms. Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1313/privacy/</link>
+      <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
+      <guid>http://localhost:1313/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example Reference</title>
+      <link>http://localhost:1313/g3/flow/example-reference/</link>
+      <pubDate>Thu, 07 Sep 2023 16:13:18 +0200</pubDate>
+      <guid>http://localhost:1313/g3/flow/example-reference/</guid>
+      <description>&lt;h1 id=&#34;flow-data-helpers&#34;&gt;Flow Data Helpers&lt;/h1&gt;&#xA;&lt;h2 id=&#34;dialog-helpers&#34;&gt;Dialog Helpers&lt;/h2&gt;&#xA;&lt;h3 id=&#34;xml-mapping&#34;&gt;XML Mapping&lt;/h3&gt;&#xA;&lt;p&gt;Helps map from a the case schema to an xsd as the inital setup&#xA;The export will create a CSV of the connect configuration&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/g3/flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/g3/flow/</guid>
+      <description>&lt;h1 id=&#34;flow-data-helpers&#34;&gt;Flow Data Helpers&lt;/h1&gt;&#xA;&lt;h2 id=&#34;dialog-helpers&#34;&gt;Dialog Helpers&lt;/h2&gt;&#xA;&lt;h3 id=&#34;xml-mapping&#34;&gt;XML Mapping&lt;/h3&gt;&#xA;&lt;p&gt;Helps map from a the case schema to an xsd as the inital setup&#xA;The export will create a CSV of the connect configuration&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
