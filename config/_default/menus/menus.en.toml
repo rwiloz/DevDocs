@@ -21,17 +21,6 @@
   url = "/docs/"
   weight = 70
 
-[[g3]]
-  name = "g3"
-  url = "/g3/"
-  weight = 70
-
-[[guide]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/guide/lorem/"
-
 [[tutorial]]
   name = "Lorem"
   weight = 10
@@ -40,13 +29,8 @@
 
 [[main]]
   name = "Docs"
-  url = "/docs/guides/example-guide/"
+  url = "/docs/g3/overview/"
 # url = "/docs/1.0/prologue/introduction/"
-  weight = 10
-
-[[main]]
-  name = "G3"
-  url = "/g3/"
   weight = 10
 
 [[main]]
