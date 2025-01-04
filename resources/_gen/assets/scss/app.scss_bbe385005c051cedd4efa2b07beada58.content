@@ -14568,4 +14568,7 @@ body {
   .docs-content {
     width: 70% !important; } }
 
+body {
+  font-size: 16px; }
+
 /*# sourceMappingURL=main.css.map */
