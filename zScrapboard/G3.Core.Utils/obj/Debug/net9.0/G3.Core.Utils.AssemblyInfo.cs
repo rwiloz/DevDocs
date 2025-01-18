@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("G3.Core.Utils")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85b346e008625ab93be0912d160e5f385c2c8a71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c052eb706a815cc220a67fce56fc7e231340251c")]
 [assembly: System.Reflection.AssemblyProductAttribute("G3.Core.Utils")]
 [assembly: System.Reflection.AssemblyTitleAttribute("G3.Core.Utils")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

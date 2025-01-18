@@ -17,16 +17,15 @@ seo:
 ## Module Types
 
 - shim
-conversion of npm commonJS to ESM for the browser
-shared dependancies like react
+  conversion of npm commonJS to ESM for the browser
+  shared dependancies like react
 
 - repackaged
   cant get it to work propertly too many dependancies
 
-
 - bundled
   includes related dependancies to be reused in g4 modules (some duplication)
-  
+
 - g4 system
   core system services (AppEngine)
   core wrapped components
@@ -36,10 +35,14 @@ shared dependancies like react
 - custom apps
 
 building G4 modules
+
 - deployed to NPM as libraries to be reused
 - deployed to G3 CMS modules for runtime deployment
 - NB need to exclude in the vite build
 
-
-<img src="/images/esmshimmodule.svg" width=400px>
-
+<img src="/images/ModuleTypes_01.png" width=400px>
+<img src="/images/ModuleTypes_02.png" width=400px>
+<img src="/images/ModuleTypes_03.png" width=400px>
+<img src="/images/ModuleTypes_06.png" width=400px>
+<img src="/images/ModuleTypes_07.png" width=400px>
+<img src="/images/ModuleTypes_08.png" width=400px>

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\G4\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj": {}
+    "C:\\Code\\Docs\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj": {}
   },
   "projects": {
-    "C:\\Code\\G4\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj": {
+    "C:\\Code\\Docs\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\G4\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj",
+        "projectUniqueName": "C:\\Code\\Docs\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj",
         "projectName": "G3.Core.Utils",
-        "projectPath": "C:\\Code\\G4\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj",
-        "packagesPath": "C:\\Users\\Ray.SOLOGICAL\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\G4\\DevDocs\\zScrapboard\\G3.Core.Utils\\obj\\",
+        "projectPath": "C:\\Code\\Docs\\DevDocs\\zScrapboard\\G3.Core.Utils\\G3.Core.Utils.csproj",
+        "packagesPath": "C:\\Users\\williamesr\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Docs\\DevDocs\\zScrapboard\\G3.Core.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ray.SOLOGICAL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\williamesr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,9 +26,7 @@
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://pkgs.dev.azure.com/CTS-Bradfield/CommunicationServicesCUS/_packaging/G3System/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -105,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
