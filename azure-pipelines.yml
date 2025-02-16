@@ -97,5 +97,5 @@ stages:
           - task: ExtractFiles@1
             displayName: 'Extract files'
             inputs:
-              archiveFilePatterns: '$(Pipeline.Workspace)/devdocs.zip'
+              archiveFilePatterns: '$(Pipeline.Workspace)/devdocs/devdocs.zip'
               destinationFolder: '$(physicalPath)'
