@@ -40,15 +40,15 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive build'
       inputs:
-        rootFolderOrFile: '$(build.artifactstagingdirectory)/public'
+        rootFolderOrFile: 'public'
         includeRootFolder: false
-        archiveFile: '$(build.artifactstagingdirectory)/docs/devdocs.zip'
+        archiveFile: '$(build.artifactstagingdirectory)/devdocs.zip'
 
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact'
       inputs:
-        pathtoPublish: '$(build.artifactstagingdirectory)\docs\devdocs.zip' 
-        artifactName: 'docs'
+        pathtoPublish: '$(build.artifactstagingdirectory)\devdocs.zip' 
+        artifactName: 'devdocs'
 
     # - task: PublishBuildArtifacts@1
     #   displayName: 'Publish
@@ -84,7 +84,7 @@ stages:
     environment: Development
     variables:
     - name: physicalPath
-      value: 'E:\WebImage\Docs'
+      value: 'E:\WebImage\Docs\Dev'
 
     pool: NonProdInternal
     strategy:
@@ -92,10 +92,10 @@ stages:
         deploy:
           steps:
           - download: current
-            artifact: 'app'
+            artifact: 'devdocs'
 
           - task: ExtractFiles@1
             displayName: 'Extract files'
             inputs:
-              archiveFilePatterns: '$(Pipeline.Workspace)/docs/devdocs.zip'
+              archiveFilePatterns: '$(Pipeline.Workspace)/devdocs.zip'
               destinationFolder: '$(physicalPath)'
