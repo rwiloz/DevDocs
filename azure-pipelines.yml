@@ -35,7 +35,7 @@ stages:
     - task: CmdLine@2
       displayName: 'Build Hugo Site'
       inputs:
-        script: 'hugo' 
+        script: 'c:\cmds\hugo' 
 
 
 # # Step 3: Publish the Generated Site as an Artifact (optional)
