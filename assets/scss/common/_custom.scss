@@ -1,0 +1,14 @@
+// Put your custom SCSS code here
+.container-fw {
+    max-width: none !important;
+}
+
+@media (min-width: 1200px) {
+    .docs-content {
+        width: 70% !important;
+    }
+}
+
+body {
+    font-size: 16px;
+}

@@ -1,0 +1,17 @@
+<svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main EMS Shim Module -->
+  <rect x="50" y="100" width="100" height="50" fill="orange" stroke="black" stroke-width="2"/>
+  <text x="60" y="130" font-family="Verdana" font-size="12" fill="black">EMS Shim</text>
+
+  <!-- Small boxes feeding into the EMS Shim -->
+  <rect x="50" y="30" width="20" height="20" fill="blue" stroke="black" stroke-width="2"/>
+  <rect x="75" y="30" width="20" height="20" fill="blue" stroke="black" stroke-width="2"/>
+  <rect x="100" y="30" width="20" height="20" fill="blue" stroke="black" stroke-width="2"/>
+  <rect x="125" y="30" width="20" height="20" fill="blue" stroke="black" stroke-width="2"/>
+
+  <!-- Lines connecting the small boxes to the EMS Shim Module -->
+  <line x1="60" y1="50" x2="75" y2="100" stroke="black" stroke-width="2"/>
+  <line x1="85" y1="50" x2="75" y2="100" stroke="black" stroke-width="2"/>
+  <line x1="110" y1="50" x2="100" y2="100" stroke="black" stroke-width="2"/>
+  <line x1="135" y1="50" x2="125" y2="100" stroke="black" stroke-width="2"/>
+</svg>
