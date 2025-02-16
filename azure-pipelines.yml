@@ -1,42 +1,39 @@
 parameters:
-- name: pool
-  type: string
-  default: Build
-- name: versionNumber
-  type: object
-  default:
-   major: 1
-   minor: 0
-   seed: 0
+    - name: pool
+      type: string
+      default: Build
+    - name: versionNumber
+      type: object
+      default:
+          major: 1
+          minor: 0
+          seed: 0
 
 stages:
-- stage: 'Build_Stage'
-  displayName: 'Build'
+    - stage: 'Build_Stage'
+      displayName: 'Build'
 
-  variables:
-    system.debug: false
-    buildOutputFolder: 'dist'
-    feed: 'CommunicationServicesCUS/G3Npm'
-    ##pnpm_config_cache: $(Pipeline.Workspace)/.pnpm-store
-    pnpm_config_cache: 'C:/Agent-Cache/.pnpm-store'
+      variables:
+          system.debug: false
+          buildOutputFolder: 'dist'
+          feed: 'CommunicationServicesCUS/G3Npm'
+          ##pnpm_config_cache: $(Pipeline.Workspace)/.pnpm-store
+          pnpm_config_cache: 'C:/Agent-Cache/.pnpm-store'
 
-    major: ${{ parameters.versionNumber.major }}
-    minor: ${{ parameters.versionNumber.minor }}
-    patch: $[counter(format('{0}.{1}', variables['major'], variables['minor']), ${{ parameters.versionNumber.seed }})]
-    version: '$(major).$(minor).$(patch)'
+          major: ${{ parameters.versionNumber.major }}
+          minor: ${{ parameters.versionNumber.minor }}
+          patch: $[counter(format('{0}.{1}', variables['major'], variables['minor']), ${{ parameters.versionNumber.seed }})]
+          version: '$(major).$(minor).$(patch)'
 
-  jobs:
-  - job: Build_Job
+      jobs:
+          - job: Build_Job
 
-    pool: ${{ parameters.pool }}
+            pool: ${{ parameters.pool }}
 
-    steps:
-
-      - script: |
-        hugo
-        displayName: 'Build Hugo Site'
-
-
+            steps:
+                - script: |
+                      hugo
+                  displayName: 'Build Hugo Site'
 # # Step 3: Publish the Generated Site as an Artifact (optional)
 # - task: PublishBuildArtifacts@1
 #   inputs:
