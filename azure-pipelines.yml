@@ -37,13 +37,24 @@ stages:
       inputs:
         script: 'c:\cmds\hugo' 
 
+    - task: ArchiveFiles@2
+      displayName: 'Archive build'
+      inputs:
+        rootFolderOrFile: '$(build.artifactstagingdirectory)/public'
+        includeRootFolder: false
+        archiveFile: '$(build.artifactstagingdirectory)/docs/devdocs.zip'
 
-# # Step 3: Publish the Generated Site as an Artifact (optional)
-# - task: PublishBuildArtifacts@1
-#   inputs:
-#     PathtoPublish: 'public'
-#     ArtifactName: 'site'
-#   displayName: 'Publish Site Artifact'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        pathtoPublish: '$(build.artifactstagingdirectory)\docs\devdocs.zip' 
+        artifactName: 'docs'
+
+    # - task: PublishBuildArtifacts@1
+    #   displayName: 'Publish
+    #   inputs:
+    #     PathtoPublish: 'public'
+    #     ArtifactName: 'site'
 
 # # Step 4: Deploy to an Azure Web App
 # - task: AzureWebApp@1
@@ -52,3 +63,39 @@ stages:
 #     appName: '<Your Azure Web App Name>'
 #     package: '$(System.DefaultWorkingDirectory)/public'
 #   displayName: 'Deploy to Azure Web App'
+
+    # - task: ExtractFiles@1
+    #   displayName: 'Extract files'
+    #   inputs:
+    #     archiveFilePatterns: '$(Pipeline.Workspace)/devdocs.zip'
+    #     destinationFolder: '$(Pipeline.Workspace)/files'
+
+
+- stage: 'Staging_Dev' 
+  displayName: 'Development' 
+  dependsOn: ['Build_Stage'] 
+
+  variables:
+    agentImage: "windows-2022" 
+
+  jobs:
+  - deployment: Deploy_Staging #No spaces
+    displayName: Staging Deployment
+    environment: Development
+    variables:
+    - name: physicalPath
+      value: 'E:\WebImage\Docs'
+
+    pool: NonProdInternal
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: 'app'
+
+          - task: ExtractFiles@1
+            displayName: 'Extract files'
+            inputs:
+              archiveFilePatterns: '$(Pipeline.Workspace)/docs/devdocs.zip'
+              destinationFolder: '$(physicalPath)'
