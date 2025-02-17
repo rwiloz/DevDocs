@@ -41,19 +41,19 @@ stages:
         customRegistry: useFeed
         customFeed: '$(feed)'
 
-    - task: Npm@1
-      displayName: 'Build Hugo'
-      inputs:
-        command: custom
-        verbose: false
-        customCommand: 'run build'
-        customRegistry: useFeed
-        customFeed: '$(feed)'
-
-    # - task: CmdLine@2
-    #   displayName: 'Build Hugo Site'
+    # - task: Npm@1
+    #   displayName: 'Build Hugo'
     #   inputs:
-    #     script: 'c:\cmds\hugo' 
+    #     command: custom
+    #     verbose: false
+    #     customCommand: 'run build'
+    #     customRegistry: useFeed
+    #     customFeed: '$(feed)'
+
+    - task: CmdLine@2
+      displayName: 'Build Hugo Site'
+      inputs:
+        script: 'c:\cmds\hugo' 
 
     - task: ArchiveFiles@2
       displayName: 'Archive build'
