@@ -41,15 +41,6 @@ stages:
         customRegistry: useFeed
         customFeed: '$(feed)'
 
-    # - task: Npm@1
-    #   displayName: 'Build Hugo'
-    #   inputs:
-    #     command: custom
-    #     verbose: false
-    #     customCommand: 'run build'
-    #     customRegistry: useFeed
-    #     customFeed: '$(feed)'
-
     - task: CmdLine@2
       displayName: 'Build Hugo Site'
       inputs:
@@ -67,26 +58,6 @@ stages:
       inputs:
         pathtoPublish: '$(build.artifactstagingdirectory)\devdocs.zip' 
         artifactName: 'devdocs'
-
-    # - task: PublishBuildArtifacts@1
-    #   displayName: 'Publish
-    #   inputs:
-    #     PathtoPublish: 'public'
-    #     ArtifactName: 'site'
-
-# # Step 4: Deploy to an Azure Web App
-# - task: AzureWebApp@1
-#   inputs:
-#     azureSubscription: '<Your Azure Service Connection>'
-#     appName: '<Your Azure Web App Name>'
-#     package: '$(System.DefaultWorkingDirectory)/public'
-#   displayName: 'Deploy to Azure Web App'
-
-    # - task: ExtractFiles@1
-    #   displayName: 'Extract files'
-    #   inputs:
-    #     archiveFilePatterns: '$(Pipeline.Workspace)/devdocs.zip'
-    #     destinationFolder: '$(Pipeline.Workspace)/files'
 
 
 - stage: 'Staging_Dev' 
